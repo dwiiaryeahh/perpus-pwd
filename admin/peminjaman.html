@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Peminjaman | Sistem Perpustakaan</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<div class="admin-container">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>📚 Admin Panel</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item">
+                <span class="icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="buku.html" class="menu-item">
+                <span class="icon">📖</span>
+                <span>Data Buku</span>
+            </a>
+            <a href="peminjaman.html" class="menu-item active">
+                <span class="icon">🔄</span>
+                <span>Data Peminjaman</span>
+            </a>
+            <a href="peserta.html" class="menu-item">
+                <span class="icon">👥</span>
+                <span>Data Peserta</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../login.html" class="logout-btn">
+                <span class="icon">🚪</span>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="content-header">
+            <h1>Data Peminjaman</h1>
+            <p>Kelola data peminjaman buku perpustakaan</p>
+        </div>
+
+        <section class="content-section">
+            <h2>Form Peminjaman Buku</h2>
+
+            <form class="form-horizontal">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Nama Peminjam</label>
+                        <input type="text" placeholder="Masukkan nama peminjam">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Judul Buku</label>
+                        <input type="text" placeholder="Masukkan judul buku">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tanggal Pinjam</label>
+                        <input type="date">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Kembali</label>
+                        <input type="date">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                    Tambah Peminjaman
+                </button>
+            </form>
+        </section>
+
+        <section class="content-section">
+            <h2>Daftar Peminjaman</h2>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Peminjam</th>
+                        <th>Judul Buku</th>
+                        <th>Tanggal Pinjam</th>
+                        <th>Tanggal Kembali</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Muhammad Daffa</td>
+                        <td>Algoritma Dasar</td>
+                        <td>2025-12-01</td>
+                        <td>2025-12-30</td>
+                        <td>
+                            <span class="badge badge-warning">Dipinjam</span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Chintya V Karwur</td>
+                        <td>Basis Data</td>
+                        <td>2025-11-28</td>
+                        <td>2025-12-05</td>
+                        <td>
+                            <span class="badge badge-success">Dikembalikan</span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Muhammad Wildan</td>
+                        <td>Ilmu Pengetahuan Alam</td>
+                        <td>2025-11-28</td>
+                        <td>2025-12-30</td>
+                        <td>
+                            <span class="badge badge-warning">Dipinjam</span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Muhammad Akbar</td>
+                        <td>Fisika Quantum</td>
+                        <td>2025-11-28</td>
+                        <td>2025-12-30</td>
+                        <td>
+                            <span class="badge badge-warning">Dipinjam</span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Dwi Arya</td>
+                        <td>Pendidikan Sosiologi</td>
+                        <td>2025-11-28</td>
+                        <td>2025-12-05</td>
+                        <td>
+                            <span class="badge badge-success">Dikembalikan</span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Nia Tri Rahayu</td>
+                        <td>Perkembangan Nusantara</td>
+                        <td>2025-11-28</td>
+                        <td>2025-12-05</td>
+                        <td>
+                            <span class="badge badge-success">Dikembalikan</span>
+                        </td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

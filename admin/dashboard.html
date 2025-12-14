@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin Perpustakaan</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📚 Admin Panel</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item active">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="buku.html" class="menu-item">
+                    <span class="icon">📖</span>
+                    <span>Data Buku</span>
+                </a>
+                <a href="peminjaman.html" class="menu-item">
+                    <span class="icon">🔄</span>
+                    <span>Data Peminjaman</span>
+                </a>
+                <a href="peserta.html" class="menu-item">
+                    <span class="icon">👥</span>
+                    <span>Data Peserta</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html" class="logout-btn">
+                    <span class="icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="content-header">
+                <h1>Dashboard</h1>
+                <p>Selamat datang di sistem informasi perpustakaan</p>
+            </header>
+
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📖</div>
+                    <div class="stat-info">
+                        <h3>Total Buku</h3>
+                        <p class="stat-number">250</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">🔄</div>
+                    <div class="stat-info">
+                        <h3>Peminjaman Aktif</h3>
+                        <p class="stat-number">45</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">👥</div>
+                    <div class="stat-info">
+                        <h3>Total Peserta</h3>
+                        <p class="stat-number">120</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="content-section">
+                <h2>Aktivitas Terbaru</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Aktivitas</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>09-12-2024</td>
+                            <td>Peminjaman Buku</td>
+                            <td>Budi meminjam "Pemrograman Web"</td>
+                        </tr>
+                        <tr>
+                            <td>09-12-2024</td>
+                            <td>Pengembalian Buku</td>
+                            <td>Ani mengembalikan "Database MySQL"</td>
+                        </tr>
+                        <tr>
+                            <td>08-12-2024</td>
+                            <td>Buku Baru</td>
+                            <td>Ditambahkan "HTML & CSS untuk Pemula"</td>
+                        </tr>
+                        <tr>
+                            <td>08-12-2024</td>
+                            <td>Anggota Baru</td>
+                            <td>Dimas terdaftar sebagai anggota baru</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

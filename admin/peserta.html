@@ -1,0 +1,265 @@
+<!DOCTYPE>
+<html lang="id">
+
+<head>
+    <title>Data Peserta Perpustakaan</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <style>
+        /* body {
+            background: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        } */
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .btn {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #3498db;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #1f245a;
+            color: #fff;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .btn-edit {
+            background: green;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .btn-delete {
+            background: red;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📚 Admin Panel</h2>
+            </div>
+            <nav class="sidebar-menu">
+                <a href="dashboard.html" class="menu-item">
+                    <span class="icon">📊</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="buku.html" class="menu-item">
+                    <span class="icon">📖</span>
+                    <span>Data Buku</span>
+                </a>
+                <a href="peminjaman.html" class="menu-item ">
+                    <span class="icon">🔄</span>
+                    <span>Data Peminjaman</span>
+                </a>
+                <a href="peserta.html" class="menu-item active">
+                    <span class="icon">👥</span>
+                    <span>Data Peserta</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html" class="logout-btn">
+                    <span class="icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <h2>Data Peserta</h2>
+            <div class="subtitle">Kelola data anggota perpustakaan</div>
+            <div class="card">
+                <h3>Tambah Peserta Baru</h3>
+                <form>
+                    <div class="form-grid">
+                        <div>
+                            <label>ID Peserta</label>
+                            <input type="text" placeholder="Masukkan ID peserta">
+                        </div>
+                        <div>
+                            <label>Nama Lengkap</label>
+                            <input type="text" placeholder="Masukkan nama lengkap">
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input type="email" placeholder="Masukkan email">
+                        </div>
+                        <div>
+                            <label>Telepon</label>
+                            <input type="text" placeholder="Masukkan nomor telepon">
+                        </div>
+                        <div>
+                            <label>Alamat</label>
+                            <textarea placeholder="Masukkan alamat lengkap"></textarea>
+                        </div>
+                        <div>
+                            <label>Jenis Kelamin</label>
+                            <select>
+                                <option>Pilih jenis kelamin</option>
+                                <option>Laki-laki</option>
+                                <option>Perempuan</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Tambah Peserta</button>
+                </form>
+            </div>
+            <div class="card">
+                <h3>Daftar Peserta</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>ID Peserta</th>
+                            <th>Nama Lengkap</th>
+                            <th>Email</th>
+                            <th>Telepon</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>S5H1425</td>
+                            <td>Muhammad Daffa</td>
+                            <td>muhdaffa@email.com</td>
+                            <td>081234567111</td>
+                            <td>Laki-laki</td>
+                            <td>
+                                <button class="btn-edit">Edit</button><br>
+                                <button class="btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>S5H1761</td>
+                            <td>Chintya V Karwur</td>
+                            <td>chintyaa@email.com</td>
+                            <td>081234567112</td>
+                            <td>Perempuan</td>
+                            <td>
+                                <button class="btn-edit">Edit</button><br>
+                                <button class="btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>S5H1692</td>
+                            <td>Muhammad Wildan</td>
+                            <td>muhwildan@email.com</td>
+                            <td>081234567113</td>
+                            <td>Laki-laki</td>
+                            <td>
+                                <button class="btn-edit">Edit</button><br>
+                                <button class="btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>S5H1719</td>
+                            <td>Muhammad Akbar</td>
+                            <td>muhakbar@email.com</td>
+                            <td>081234567114</td>
+                            <td>Laki-laki</td>
+                            <td>
+                                <button class="btn-edit">Edit</button><br>
+                                <button class="btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>S5H1487</td>
+                            <td>Dwi Arya Putra</td>
+                            <td>dwiaryaa@email.com</td>
+                            <td>081234567115</td>
+                            <td>Laki-laki</td>
+                            <td>
+                                <button class="btn-edit">Edit</button><br>
+                                <button class="btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>S5H1732</td>
+                            <td>Nia Tri Rahayu</td>
+                            <td>niaatrii@email.com</td>
+                            <td>081234567116</td>
+                            <td>Perempuan</td>
+                            <td>
+                                <button class="btn-edit">Edit</button><br>
+                                <button class="btn-delete">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
