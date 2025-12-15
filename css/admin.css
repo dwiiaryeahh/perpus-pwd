@@ -283,6 +283,7 @@ body {
     font-size: 0.85rem;
     margin-right: 0.5rem;
     transition: opacity 0.3s;
+    min-width: 60px;
 }
 
 .btn-edit {
