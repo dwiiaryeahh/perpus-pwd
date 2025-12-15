@@ -1,11 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Buku - Admin Perpustakaan</title>
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
-    LAMA DAOA
+<div class="admin-container">
+ 
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>📚 Admin Panel</h2>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item">
+                <span class="icon">📊</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="buku.html" class="menu-item active">
+                <span class="icon">📖</span>
+                <span>Data Buku</span>
+            </a>
+            <a href="peminjaman.html" class="menu-item">
+                <span class="icon">🔄</span>
+                <span>Data Peminjaman</span>
+            </a>
+            <a href="peserta.html" class="menu-item">
+                <span class="icon">👥</span>
+                <span>Data Peserta</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="../login.html" class="logout-btn">
+                <span class="icon">🚪</span>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+ 
+    <!-- Main Content -->
+    <main class="main-content">
+ 
+        <!-- Header -->
+        <header class="content-header">
+            <h1>Data Buku Perpustakaan</h1>
+            <p>Kelola data buku perpustakaan</p>
+        </header>
+ 
+        <!-- Form Tambah Buku -->
+        <div class="content-section">
+            <h2>Tambah Buku Baru</h2>
+ 
+            <form class="form-horizontal">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Kode Buku</label>
+                        <input type="text" placeholder="Contoh: BK001">
+                    </div>
+                    <div class="form-group">
+                        <label>Judul Buku</label>
+                        <input type="text" placeholder="Masukkan Judul buku">
+                    </div>
+                </div>
+ 
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Pengarang</label>
+                        <input type="text" placeholder="Masukkan Nama pengarang">
+                    </div>
+                    <div class="form-group">
+                        <label>Penerbit</label>
+                        <input type="text" placeholder="Masukkan Nama penerbit">
+                    </div>
+                </div>
+ 
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Tahun Terbit</label>
+                        <input type="number" placeholder="Contoh: 2025">
+                    </div>
+                    <div class="form-group">
+                        <label>Stok Buku</label>
+                        <input type="number" placeholder="Jumlah stok">
+                    </div>
+                </div>
+ 
+                <div class="btn-center">
+                    <button type="submit" class="btn-primary btn-tambah">
+                        Tambah Buku
+                    </button>
+                </div>
+            </form>
+        </div>
+ 
+        <!-- Tabel Data Buku -->
+        <div class="content-section">
+            <h2>Daftar Buku</h2>
+ 
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode</th>
+                        <th>Judul</th>
+                        <th>Pengarang</th>
+                        <th>Penerbit</th>
+                        <th>Tahun</th>
+                        <th>Stok</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>BK001</td>
+                        <td>Pemrograman Web</td>
+                        <td>Kurniawan</td>
+                        <td>ElCoding</td>
+                        <td>2020</td>
+                        <td>20</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>BK002</td>
+                        <td>Pemrograman Aplikasi</td>
+                        <td>Kurniadi</td>
+                        <td>ElCoding</td>
+                        <td>2019</td>
+                        <td>20</td>
+                        <td>
+                            <button class="btn-edit">Edit</button>
+                            <button class="btn-delete">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+ 
+    </main>
+</div>
 </body>
 </html>
