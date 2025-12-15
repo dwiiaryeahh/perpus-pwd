@@ -221,6 +221,13 @@ body {
     border-color: #3498db;
 }
 
+.btn-center {
+    display: flex;
+    justify-content: end;
+    margin-top: 1.5frem;
+}
+
+
 .btn-primary {
     background-color: #3498db;
     color: white;

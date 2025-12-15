@@ -1,105 +1,16 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
-    <title>Data Peserta Perpustakaan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Peserta - Admin Perpustakaan</title>
     <link rel="stylesheet" href="../css/admin.css">
-    <style>
-        /* body {
-            background: #f4f6f9;
-            margin: 0;
-            padding: 20px;
-        } */
-
-        .subtitle {
-            color: #777;
-            margin-bottom: 20px;
-        }
-
-        .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        input,
-        textarea,
-        select {
-            width: 90%;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        textarea {
-            resize: none;
-            height: 80px;
-        }
-
-        .btn {
-            margin-top: 15px;
-            padding: 10px 15px;
-            background: #3498db;
-            border: none;
-            color: #fff;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        thead {
-            background: #1f245a;
-            color: #fff;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        .btn-edit {
-            background: green;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-bottom: 5px;
-        }
-
-        .btn-delete {
-            background: red;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 
 <body>
     <div class="admin-container">
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h2>📚 Admin Panel</h2>
@@ -113,7 +24,7 @@
                     <span class="icon">📖</span>
                     <span>Data Buku</span>
                 </a>
-                <a href="peminjaman.html" class="menu-item ">
+                <a href="peminjaman.html" class="menu-item">
                     <span class="icon">🔄</span>
                     <span>Data Peminjaman</span>
                 </a>
@@ -129,48 +40,62 @@
                 </a>
             </div>
         </aside>
+
+        <!-- Main Content -->
         <main class="main-content">
-            <h2>Data Peserta</h2>
-            <div class="subtitle">Kelola data anggota perpustakaan</div>
-            <div class="card">
-                <h3>Tambah Peserta Baru</h3>
-                <form>
-                    <div class="form-grid">
-                        <div>
-                            <label>ID Peserta</label>
-                            <input type="text" placeholder="Masukkan ID peserta">
+            <header class="content-header">
+                <h1>Data Peserta</h1>
+                <p>Kelola data anggota perpustakaan</p>
+            </header>
+
+            <!-- Form Add Peserta -->
+            <div class="content-section">
+                <h2>Tambah Peserta Baru</h2>
+                <form class="form-horizontal">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="id-peserta">ID Peserta</label>
+                            <input type="text" id="id-peserta" placeholder="Masukkan ID peserta" required>
                         </div>
-                        <div>
-                            <label>Nama Lengkap</label>
-                            <input type="text" placeholder="Masukkan nama lengkap">
+                        <div class="form-group">
+                            <label for="nama-peserta-add">Nama Lengkap</label>
+                            <input type="text" id="nama-peserta-add" placeholder="Masukkan nama lengkap" required>
                         </div>
-                        <div>
-                            <label>Email</label>
-                            <input type="email" placeholder="Masukkan email">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Masukkan email" required>
                         </div>
-                        <div>
-                            <label>Telepon</label>
-                            <input type="text" placeholder="Masukkan nomor telepon">
+                        <div class="form-group">
+                            <label for="telepon">Telepon</label>
+                            <input type="tel" id="telepon" placeholder="Masukkan nomor telepon" required>
                         </div>
-                        <div>
-                            <label>Alamat</label>
-                            <textarea placeholder="Masukkan alamat lengkap"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <textarea id="alamat" rows="3" placeholder="Masukkan alamat lengkap" required></textarea>
                         </div>
-                        <div>
-                            <label>Jenis Kelamin</label>
-                            <select>
-                                <option>Pilih jenis kelamin</option>
-                                <option>Laki-laki</option>
-                                <option>Perempuan</option>
+                        <div class="form-group">
+                            <label for="jenis-kelamin">Jenis Kelamin</label>
+                            <select id="jenis-kelamin" required>
+                                <option value="">Pilih jenis kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn">Tambah Peserta</button>
+                    <div class="btn-center">
+                        <button type="submit" class="btn-primary">Tambah Peserta</button>
+                    </div>
                 </form>
             </div>
-            <div class="card">
-                <h3>Daftar Peserta</h3>
-                <table>
+
+            <!-- List Peserta -->
+            <div class="content-section">
+                <h2>Daftar Peserta</h2>
+                <table class="data-table">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -257,6 +182,7 @@
                         </tr>
                     </tbody>
                 </table>
+
             </div>
         </main>
     </div>
