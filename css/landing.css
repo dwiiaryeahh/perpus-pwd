@@ -22,6 +22,9 @@ body {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 20px;
     letter-spacing: 1px;
 }
@@ -71,6 +74,7 @@ body {
 .fitur-wrap table td {
     width: 25%;
     padding: 15px;
+    vertical-align: top;
 }
 
 .fitur-box {
@@ -79,6 +83,9 @@ body {
     padding: 25px;
     text-align: center;
     border: 1px solid #e1e1e1;
+    min-height: 200px;;
+    display: flex;
+    flex-direction: column;
 }
 
 .fitur-box:hover {
@@ -208,7 +215,9 @@ body {
 }
 
 .contact-form button {
-    width: 100%;
+    background-color: #1d2b53;
+    color: white;
+    width: 104%;
     padding: 0.8rem;
     border: none;
     cursor: pointer;

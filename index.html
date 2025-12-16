@@ -4,12 +4,16 @@
     <title>Universitas Indraprasta PGRI - Home</title>
     <link rel="stylesheet" href="css/landing.css">
     <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
     <table width="100%" id="nav">
         <tr>
-            <td class="logo">Universitas Indraprasta PGRI</td>
+            <td class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/8/8f/Logo_Universitas_Indraprasta_PGRI_%28UNINDRA%29.png/250px-Logo_Universitas_Indraprasta_PGRI_%28UNINDRA%29.png" alt="UNINDRA Logo" height="40">
+                Universitas Indraprasta PGRI
+            </td>
             <td align="right" class="menu">
                 <a href="#beranda">Beranda</a>
                 <a href="#tentang">Tentang</a>
@@ -52,31 +56,39 @@
                 <table width="80%">
                     <tr>
                         <td>
-                            <div class="fitur-box">
-                                <div class="fitur-icon">📚</div>
-                                <div class="fitur-title">Manajemen Buku</div>
-                                <div class="fitur-text">Kelola data buku dengan mudah dan cepat.</div>
+                            <div data-aos="fade-up" data-aos-delay="200">
+                                <div class="fitur-box">
+                                    <div class="fitur-icon">📚</div>
+                                    <div class="fitur-title">Manajemen Buku</div>
+                                    <div class="fitur-text">Kelola data buku dengan mudah dan cepat.</div>
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="fitur-box">
-                                <div class="fitur-icon">🔎</div>
-                                <div class="fitur-title">Pencarian Cepat</div>
-                                <div class="fitur-text">Temukan informasi buku dan data akademik hanya dalam hitungan detik.</div>
+                            <div data-aos="fade-down" data-aos-delay="200">
+                                <div class="fitur-box">
+                                    <div class="fitur-icon">🔎</div>
+                                    <div class="fitur-title">Pencarian Cepat</div>
+                                    <div class="fitur-text">Temukan informasi buku dan data akademik hanya dalam hitungan detik.</div>
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="fitur-box">
-                                <div class="fitur-icon">👥</div>
-                                <div class="fitur-title">Data Mahasiswa</div>
-                                <div class="fitur-text">Informasi mahasiswa tersimpan rapi dan mudah diakses.</div>
+                            <div data-aos="fade-up" data-aos-delay="200">
+                                <div class="fitur-box">
+                                    <div class="fitur-icon">👥</div>
+                                    <div class="fitur-title">Data Mahasiswa</div>
+                                    <div class="fitur-text">Informasi mahasiswa tersimpan rapi dan mudah diakses.</div>
+                                </div>
                             </div>
                         </td>
                         <td>
-                            <div class="fitur-box">
-                                <div class="fitur-icon">📊</div>
-                                <div class="fitur-title">Laporan & Statistik</div>
-                                <div class="fitur-text">Pantau aktivitas dan statistik kampus dengan akurat.</div>
+                            <div  data-aos="fade-down" data-aos-delay="200">
+                                <div class="fitur-box">
+                                    <div class="fitur-icon">📊</div>
+                                    <div class="fitur-title">Laporan & Statistik</div>
+                                    <div class="fitur-text">Pantau aktivitas dan statistik kampus dengan akurat.</div>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -115,9 +127,13 @@
         </div>
     </section>
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <div id="footer">
         ©️ 2025 Universitas Indraprasta PGRI. All rights reserved.
     </div>
-
 </body>
 </html>
